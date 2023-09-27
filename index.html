@@ -50,8 +50,35 @@
       }
       let mo1 = mo(prompt("Pascal's triangle >> (Number only) \n If you enter a large number, you may need to zoom out 😇"));
       document.write(
-        `<div style="display:flex;flex-direction:column;align-items:center;width:fit-content;margin:auto;"><p style='font-family: system-ui;font-size:30px;margin: 10px 0 20px 0;'>Mohamed Shalan</p>${mo1}</div>`
+        `<div style="display:flex;flex-direction:column;align-items:center;width:fit-content;margin:auto;">
+          <p style='outline: 1px 1px 1px black blue;position:relative; font-family:system-ui; font-size:30px; margin: 10px 0 20px 0; width:fit-content;'class='name'>
+            Mohamed Shalan
+          </p>
+          ${mo1}
+        </div>`
       );
     </script>
+    <style>
+      .name::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -25px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #4790ff;
+      }
+      .name::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -25px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #4790ff;
+      }
+    </style>
   </body>
 </html>
